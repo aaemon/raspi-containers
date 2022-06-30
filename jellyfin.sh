@@ -8,7 +8,7 @@ docker run -d \
   -p 8096:8096 \
   -p 8920:8920 `#optional` \
   -v /portainer/Files/AppData/Config/jellyfin:/config \
-  -v /media/nfs/tvshows-english:/data/tvshows \
+  -v /media/nfs/tvshows-english:/data/tvshows-english \
   -v /media/nfs/movies-english:/data/movies-english \
   -v /media/nfs/movies-hindi:/data/movies-hindi \
   -v /media/nfs/movies-bangla:/data/movies-bangla \
