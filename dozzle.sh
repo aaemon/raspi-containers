@@ -1,7 +1,10 @@
 #!/bin/bash
 
-docker run -d \
+sudo docker pull amir20/dozzle:latest || error "Failed to pull the latest Dozzle docker image!"
+
+sudo docker run -d \
   --name=dozzle \
-  --volume=/var/run/docker.sock:/var/run/docker.sock \
+  -v /var/run/docker.sock:/var/run/docker.sock \
   --restart unless-stopped \
-  -p 8080:8080 amir20/dozzle:latest
+  -p 8080:8080 \
+  amir20/dozzle:latest || error "Failed to run Dozzle docker image!"

@@ -1,19 +1,18 @@
 #!/bin/bash
 
-sudo docker pull lscr.io/linuxserver/jellyfin:latest || error "Failed to pull the latest Jellyfin docker image!"
+sudo docker pull lscr.io/linuxserver/bazarr:latest || error "Failed to pull the latest Bazarr docker image!"
 
-sudo docker run -d \
-  --name=jellyfin \
+docker run -d \
+  --name=bazarr \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Asia/Dhaka \
-  -p 8096:8096 \
-  -p 8920:8920 `#optional` \
-  -v /portainer/Files/AppData/Config/jellyfin:/config \
+  -p 6767:6767 \
+  -v /portainer/Files/AppData/Config/bazarr:/config \
   -v /media/nfs/tvshows-english:/data/tvshows-english \
   -v /media/nfs/movies-english:/data/movies-english \
   -v /media/nfs/movies-hindi:/data/movies-hindi \
   -v /media/nfs/movies-bangla:/data/movies-bangla \
   -v /media/nfs/animations-english:/data/animations-english \
   --restart unless-stopped \
-  lscr.io/linuxserver/jellyfin:latest || error "Failed to run Jellyfin docker image!"
+  lscr.io/linuxserver/bazarr:latest || error "Failed to run Bazarr docker image!"

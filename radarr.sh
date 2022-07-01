@@ -1,6 +1,8 @@
 #!/bin/bash
 
-docker run -d \
+sudo docker pull lscr.io/linuxserver/radarr:latest || error "Failed to pull the latest Radarr docker image!"
+
+sudo docker run -d \
   --name=radarr \
   -e PUID=1000 \
   -e PGID=1000 \
@@ -13,4 +15,4 @@ docker run -d \
   -v /media/nfs/animations-english:/animations-english `#optional` \
   -v /media/nfs/downloads:/torrent/downloads `#optional` \
   --restart unless-stopped \
-  lscr.io/linuxserver/radarr:latest
+  lscr.io/linuxserver/radarr:latest || error "Failed to run Radarr docker image!"

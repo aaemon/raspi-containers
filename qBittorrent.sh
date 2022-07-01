@@ -1,6 +1,8 @@
 #!/bin/bash
 
-docker run -d \
+sudo docker pull lscr.io/linuxserver/qbittorrent:latest || error "Failed to pull the latest qBittorrent docker image!"
+
+sudo docker run -d \
   --name=qbittorrent \
   -e PUID=1000 \
   -e PGID=1000 \
@@ -12,4 +14,4 @@ docker run -d \
   -v /portainer/Files/AppData/Config/qBittorrent:/config \
   -v /media/nfs/downloads:/torrent/downloads \
   --restart unless-stopped \
-  lscr.io/linuxserver/qbittorrent:latest
+  lscr.io/linuxserver/qbittorrent:latest || error "Failed to run qBittorrent docker image!"
