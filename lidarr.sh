@@ -1,7 +1,6 @@
 #!/bin/bash
 
 read -p "Time Zone: " tz
-
 echo "Waiting to pull the latest image..."
 
 sudo docker pull lscr.io/linuxserver/lidarr:latest || error "Failed to pull Lidarr docker image!"

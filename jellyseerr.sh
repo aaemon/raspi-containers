@@ -1,7 +1,6 @@
 #!/bin/bash
 
 read -p "Time Zone: " tz
-
 echo "Waiting to pull the latest image..."
 
 sudo docker pull fallenbagel/jellyseerr:latest || error "Failed to pull Jellyseerr docker image!"

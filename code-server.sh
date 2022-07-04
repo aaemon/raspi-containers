@@ -3,7 +3,6 @@
 read -p "Time Zone: " tz
 read -p "Password: " password
 read -p "Sudo Password: " sudo_password
-
 echo "Waiting to pull the latest image..."
 
 sudo docker pull lscr.io/linuxserver/code-server:latest || error "Failed to pull Code-Server docker image!"
