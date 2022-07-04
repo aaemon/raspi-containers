@@ -1,12 +1,15 @@
 #!/bin/bash
 
-sudo docker pull lscr.io/linuxserver/radarr:latest || error "Failed to pull the latest Radarr docker image!"
+read -p "Time Zone: " timezone
+echo "Waiting to pull the latest image..."
+
+sudo docker pull lscr.io/linuxserver/radarr:latest || error "Failed to pull Radarr docker image!"
 
 sudo docker run -d \
   --name=radarr \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e TZ=Asia/Dhaka \
+  -e "TZ=${timezone}" \
   -p 7878:7878 \
   -v /portainer/Files/AppData/Config/radarr:/config \
   -v /media/nfs/movies-english:/movies-english `#optional` \
@@ -15,4 +18,4 @@ sudo docker run -d \
   -v /media/nfs/animations-english:/animations-english `#optional` \
   -v /media/nfs/downloads:/torrent/downloads `#optional` \
   --restart unless-stopped \
-  lscr.io/linuxserver/radarr:latest || error "Failed to run Radarr docker image!"
+  lscr.io/linuxserver/radarr:latest || error "Failed to run Radarr docker container!"
