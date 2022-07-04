@@ -6,7 +6,7 @@ sudo docker pull emby/embyserver:latest || error "Failed to pull Emby docker ima
 
 docker run -d \
     --name embyserver \
-    -v /portainer/Files/AppData/Config/embyserver:/config \ # Configuration directory
+    -v /portainer/Files/AppData/Config/embyserver:/config \
     -v /media/nfs/tvshows-english:/data/tvshows-english \
     -v /media/nfs/movies-english:/data/movies-english \
     -v /media/nfs/movies-hindi:/data/movies-hindi \

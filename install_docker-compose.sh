@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 compose_release() {
   curl --silent "https://api.github.com/repos/docker/compose/releases/latest" |

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+read -p "PLEX Claim Token: " token
 echo "Waiting to pull the latest image..."
 
 sudo docker pull lscr.io/linuxserver/plex:latest || error "Failed to pull Plex docker image!"
@@ -10,7 +11,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e VERSION=docker \
-  -e PLEX_CLAIM= `#optional` \
+  -e PLEX_CLAIM_TOKEN=${token} \
   -v /portainer/Files/AppData/Config/plex:/config \
   -v /media/nfs/tvshows-english:/data/tvshows-english \
   -v /media/nfs/movies-english:/data/movies-english \

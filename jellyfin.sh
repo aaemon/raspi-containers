@@ -1,7 +1,6 @@
 #!/bin/bash
 
-read -p "Time Zone: " timezone
-
+read -p "Time Zone: " tz
 echo "Waiting to pull the latest image..."
 
 sudo docker pull lscr.io/linuxserver/jellyfin:latest || error "Failed to pull Jellyfin docker image!"
@@ -10,7 +9,7 @@ sudo docker run -d \
   --name=jellyfin \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e "TZ=${timezone}" \
+  -e TZ=${tz} \
   -p 8096:8096 \
   -p 8920:8920 `#optional` \
   -v /portainer/Files/AppData/Config/jellyfin:/config \

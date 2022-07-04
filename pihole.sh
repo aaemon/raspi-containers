@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Time Zone: " timezone
+read -p "Time Zone: " tz
 echo "Waiting to pull the latest image..."
 
 sudo docker pull pihole/pihole:latest || error "Failed to pull PiHole docker image!"
@@ -10,7 +10,7 @@ sudo docker run -d \
     -p 53:53/tcp -p 53:53/udp \
     -p 1010:80 \
     -p 4430:443 \
-    -e TZ=${timezone} \
+    -e TZ=${tz} \
     -v "/portainer/Files/AppData/Config/pihole/etc-pihole:/etc/pihole" \
     -v "/portainer/Files/AppData/Config/pihole/etc-dnsmasq.d:/etc/dnsmasq.d" \
     --restart=unless-stopped \

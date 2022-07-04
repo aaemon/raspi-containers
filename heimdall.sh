@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Time Zone: " timezone
+read -p "Time Zone: " tz
 
 sudo docker pull lscr.io/linuxserver/heimdall:latest || error "Failed to pull Heimdall docker image!"
 
@@ -8,7 +8,7 @@ docker run -d \
   --name=heimdall \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e "TZ=${timezone}" \
+  -e TZ=${tz} \
   -p 80:80 \
   -p 443:443 \
   -v /portainer/Files/AppData/Config/heimdall:/config \

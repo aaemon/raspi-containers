@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Time Zone: " timezone
+read -p "Time Zone: " tz
 
 echo "Waiting to pull the latest image..."
 
@@ -10,7 +10,7 @@ docker run -d \
   --name=lidarr \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e "TZ=${timezone}" \
+  -e TZ=${tz} \
   -p 8686:8686 \
   -v /portainer/Files/AppData/Config/config:/config \
   -v /media/nfs/music:/music 

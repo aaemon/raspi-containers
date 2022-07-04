@@ -10,6 +10,6 @@ sudo docker run -d \
   --name mariadb \
   -p 3808:3306 \
   -v /var/lib/mariadb:/var/lib/mysql \
-  -e "MARIADB_ROOT_PASSWORD=${pswd}" \
+  -e MARIADB_ROOT_PASSWORD=${pswd} \
   --restart unless-stopped \
   mariadb:latest || error "Failed to run MariaDB docker container!"
