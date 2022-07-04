@@ -1,6 +1,8 @@
 #!/bin/bash
 
-sudo docker pull ghcr.io/ajnart/homarr:latest || error "Failed to pull the latest Homarr docker image!"
+echo "Waiting to pull the latest image..."
+
+sudo docker pull ghcr.io/ajnart/homarr:latest || error "Failed to pull Homarr docker image!"
 
 docker run  \
   --name homarr \
@@ -8,4 +10,4 @@ docker run  \
   -p 7575:7575 \
   -v /portainer/Files/AppData/Config/homarr/configs:/app/data/configs \
   -v /portainer/Files/AppData/Config/homarr/icons:/app/public/icons \
-  -d ghcr.io/ajnart/homarr:latest || error "Failed to run Homarr docker image!"
+  -d ghcr.io/ajnart/homarr:latest || error "Failed to run Homarr docker container!"

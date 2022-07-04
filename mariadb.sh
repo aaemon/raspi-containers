@@ -2,9 +2,9 @@
 
 read -s -p "Enter MariaDB Root Password: " pswd
 echo ""
-echo "Waiting to Pull the latest image..."
+echo "Waiting to pull the latest image..."
 
-sudo docker pull mariadb:latest || error "Failed to pull the latest MariaDB docker image!"
+sudo docker pull mariadb:latest || error "Failed to pull MariaDB docker image!"
 
 sudo docker run -d \
   --name mariadb \
@@ -12,4 +12,4 @@ sudo docker run -d \
   -v /var/lib/mariadb:/var/lib/mysql \
   -e "MARIADB_ROOT_PASSWORD=${pswd}" \
   --restart unless-stopped \
-  mariadb:latest || error "Failed to run MariaDB docker image!"
+  mariadb:latest || error "Failed to run MariaDB docker container!"

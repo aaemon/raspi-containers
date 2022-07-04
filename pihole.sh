@@ -1,12 +1,16 @@
 #!/bin/bash
 
-sudo docker pull pihole/pihole:latest || error "Failed to pull the latest PiHole docker image!"
+read -p "Time Zone: " timezone
+echo "Waiting to pull the latest image..."
+
+sudo docker pull pihole/pihole:latest || error "Failed to pull PiHole docker image!"
 
 sudo docker run -d \
     --name pihole \
     -p 53:53/tcp -p 53:53/udp \
     -p 1010:80 \
-    -e TZ="Asia/Dhaka" \
+    -p 4430:443 \
+    -e TZ=${timezone} \
     -v "/portainer/Files/AppData/Config/pihole/etc-pihole:/etc/pihole" \
     -v "/portainer/Files/AppData/Config/pihole/etc-dnsmasq.d:/etc/dnsmasq.d" \
     --restart=unless-stopped \
@@ -15,4 +19,4 @@ sudo docker run -d \
     -e PROXY_LOCATION="pi.hole" \
     -e ServerIP="127.0.0.1" \
     --restart unless-stopped \
-    pihole/pihole:latest || error "Failed to run PiHole docker image!"
+    pihole/pihole:latest || error "Failed to run PiHole docker container!"

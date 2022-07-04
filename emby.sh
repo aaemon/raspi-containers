@@ -1,6 +1,8 @@
 #!/bin/bash
 
-sudo docker pull emby/embyserver:latest || error "Failed to pull the latest Emby docker image!"
+echo "Waiting to pull the latest image..."
+
+sudo docker pull emby/embyserver:latest || error "Failed to pull Emby docker image!"
 
 docker run -d \
     --name embyserver \
@@ -18,4 +20,4 @@ docker run -d \
     --env UID=1000 \ # The UID to run emby as (default: 2)
     --env GID=1000 \ # The GID to run emby as (default 2)
     --restart unless-stopped \
-    emby/embyserver:latest || error "Failed to run Emby docker image!"
+    emby/embyserver:latest || error "Failed to run Emby docker container!"
