@@ -5,7 +5,7 @@ echo "Waiting to pull the latest image..."
 
 sudo docker pull lscr.io/linuxserver/bazarr:latest || error "Failed to pull Bazarr docker image!"
 
-docker run -d \
+sudo docker run -d \
   --name=bazarr \
   -e PUID=1000 \
   -e PGID=1000 \

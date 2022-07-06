@@ -5,7 +5,7 @@ echo "Waiting to pull the latest image..."
 
 sudo docker pull lscr.io/linuxserver/freshrss:latest || error "Failed to pull FreshRSS docker image!"
 
-docker run -d \
+sudo docker run -d \
   --name=freshrss \
   -e PUID=1000 \
   -e PGID=1000 \

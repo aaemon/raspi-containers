@@ -4,7 +4,7 @@ echo "Waiting to pull the latest image..."
 
 sudo docker pull emby/embyserver:latest || error "Failed to pull Emby docker image!"
 
-docker run -d \
+sudo docker run -d \
     --name embyserver \
     -v /portainer/Files/AppData/Config/embyserver:/config \
     -v /media/nfs/tvshows-english:/data/tvshows-english \

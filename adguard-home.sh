@@ -4,7 +4,7 @@ echo "Waiting to pull the latest image..."
 
 sudo docker pull adguard/adguardhome:latest || error "Failed to pull AdGuardHome docker image!"
 
-docker run -d \
+sudo docker run -d \
     --name adguardhome \
     --restart unless-stopped \
     -v /portainer/Files/AppData/Config/adguardhome/work:/opt/adguardhome/work \

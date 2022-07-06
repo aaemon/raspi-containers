@@ -4,7 +4,7 @@ echo "Waiting to pull the latest image..."
 
 sudo docker pull ghcr.io/ajnart/homarr:latest || error "Failed to pull Homarr docker image!"
 
-docker run  \
+sudo docker run  \
   --name homarr \
   --restart unless-stopped \
   -p 7575:7575 \
