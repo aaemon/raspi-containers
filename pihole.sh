@@ -1,6 +1,7 @@
 #!/bin/bash
 
 read -p "Time Zone: " tz
+read -p "WEB Password: " password
 echo "Waiting to pull the latest image..."
 
 sudo docker pull pihole/pihole:latest || error "Failed to pull PiHole docker image!"
@@ -11,6 +12,7 @@ sudo docker run -d \
     -p 1010:80 \
     -p 4430:443 \
     -e TZ=${tz} \
+    -e WEBPASSWORD=${password} \
     -v "/portainer/Files/AppData/Config/pihole/etc-pihole:/etc/pihole" \
     -v "/portainer/Files/AppData/Config/pihole/etc-dnsmasq.d:/etc/dnsmasq.d" \
     --restart=unless-stopped \

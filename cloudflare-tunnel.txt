@@ -1,0 +1,20 @@
+docker run -v ${PWD}/config:/root/.cloudflared msnelling/cloudflared cloudflared tunnel login
+
+docker run -v ${PWD}/config:/etc/cloudflared msnelling/cloudflared cloudflared tunnel create my_tunnel
+
+echo 'tunnel: <UUID>' > config/config.yaml
+
+version: '2'
+services:
+    cloudflared:
+    image: msnelling/cloudflared
+    container_name: cloudflared
+    volumes:
+        - ./config:/etc/cloudflared
+    command: /usr/local/bin/cloudflared tunnel --no-autoupdate run
+    restart: always
+    networks:
+        - cloudflared
+networks:
+    cloudflared:
+        name: cloudflared
