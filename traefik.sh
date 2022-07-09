@@ -11,5 +11,5 @@ sudo docker run -d \
     -v /portainer/Files/AppData/Config/traefik/traefik.yml:/etc/traefik/traefik.yml \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -- restart=unless-stopped \
-    traefik:latest
+    traefik:latest || error "Failed to run Traefik docker image!"
 
