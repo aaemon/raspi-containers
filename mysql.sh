@@ -1,7 +1,6 @@
 #!/bin/bash
 
-read -s -p "Enter MySQL Root Password: " password
-echo ""
+read -s "Enter MySQL Root Password: " password
 echo "Waiting to pull the latest image..."
 
 sudo docker pull mysql:latest || error "Failed to pull MySQL docker image!"
