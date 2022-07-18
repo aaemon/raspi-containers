@@ -12,7 +12,7 @@ sudo docker run -d \
   -e TZ=${tz} \
   -p 8008:80 \
   -p 4403:443 \
-  -v /portainer/Files/AppData/Config/nextcloud:/config \
+  -v /portainer/Files/AppData/Config/NextCloud:/config \
   -v /media/nfs/nextcloud:/data \
   --restart unless-stopped \
   lscr.io/linuxserver/nextcloud:latest || error "Failed to run NextCloud docker container!"

@@ -11,7 +11,7 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 3008:3000 \
-  -v /portainer/Files/AppData/Config/wikijs/config:/config \
-  -v /portainer/Files/AppData/Config/wikijs/data:/data \
+  -v /portainer/Files/AppData/Config/WikiJS/config:/config \
+  -v /portainer/Files/AppData/Config/WikiJS/data:/data \
   --restart unless-stopped \
   lscr.io/linuxserver/wikijs:latest || error "Failed to run WikiJS docker image!"

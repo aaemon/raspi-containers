@@ -11,6 +11,6 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 8055:80 \
-  -v /portainer/Files/AppData/Config/freshrss:/config \
+  -v /portainer/Files/AppData/Config/FreshRSS:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/freshrss:latest || error "Failed to run FreshRSS docker container!"

@@ -13,8 +13,8 @@ sudo docker run -d \
     -e RUN_OPTS=<run options here> `#optional` \
     -p 9981:9981 \
     -p 9982:9982 \
-    -v /portainer/Files/AppData/Config/tvheadend/config:/config \
-    -v /portainer/Files/AppData/Config/tvheadend/recordings:/recordings \
+    -v /portainer/Files/AppData/Config/TVHeadEnd/config:/config \
+    -v /portainer/Files/AppData/Config/TVHeadEnd/recordings:/recordings \
     --device /dev/dri:/dev/dri `#optional` \
     --device /dev/dvb:/dev/dvb `#optional` \
     --restart unless-stopped \

@@ -12,7 +12,7 @@ sudo docker run -d \
   -e TZ=${tz} \
   -p 8096:8096 \
   -p 8920:8920 `#optional` \
-  -v /portainer/Files/AppData/Config/jellyfin:/config \
+  -v /portainer/Files/AppData/Config/Jellyfin:/config \
   -v /media/nfs/tvshows-english:/data/tvshows-english \
   -v /media/nfs/movies-english:/data/movies-english \
   -v /media/nfs/movies-hindi:/data/movies-hindi \

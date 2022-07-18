@@ -11,6 +11,6 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 4545:4545 \
-  -v /portainer/Files/AppData/Config/requestrr:/config \
+  -v /portainer/Files/AppData/Config/Requestrr:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/requestrr:latest || error "Failed to run Requestrr docker container!"

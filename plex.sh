@@ -12,7 +12,7 @@ sudo docker run -d \
   -e PGID=1000 \
   -e VERSION=docker \
   -e PLEX_CLAIM_TOKEN=${token} \
-  -v /portainer/Files/AppData/Config/plex:/config \
+  -v /portainer/Files/AppData/Config/Plex:/config \
   -v /media/nfs/tvshows-english:/data/tvshows-english \
   -v /media/nfs/movies-english:/data/movies-english \
   -v /media/nfs/movies-hindi:/data/movies-hindi \

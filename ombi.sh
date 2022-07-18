@@ -12,6 +12,6 @@ sudo docker run -d \
   -e TZ=${tz} \
   -e BASE_URL=/ombi `#optional` \
   -p 3579:3579 \
-  -v /portainer/Files/AppData/Config/ombi:/config \
+  -v /portainer/Files/AppData/Config/Ombi:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/ombi:latest || error "Failed to run Ombi docker container!"

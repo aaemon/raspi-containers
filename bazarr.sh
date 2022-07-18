@@ -11,7 +11,7 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 6767:6767 \
-  -v /portainer/Files/AppData/Config/bazarr:/config \
+  -v /portainer/Files/AppData/Config/Bazarr:/config \
   -v /media/nfs/tvshows-english:/data/tvshows-english \
   -v /media/nfs/movies-english:/data/movies-english \
   -v /media/nfs/movies-hindi:/data/movies-hindi \

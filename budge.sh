@@ -12,6 +12,6 @@ sudo docker run -d \
   -e TZ=${tz} \
   -p 8081:80 \
   -p 4431:443 \
-  -v /portainer/Files/AppData/Config/budge:/config \
+  -v /portainer/Files/AppData/Config/Budge:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/budge:latest || error "Failed to run Budge docker container!"

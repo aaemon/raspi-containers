@@ -10,6 +10,6 @@ sudo docker run -d \
   -e LOG_LEVEL=debug \
   -e TZ=${tz} \
   -p 5055:5055 \
-  -v /portainer/Files/AppData/Config/jellyseerr:/app/config \
+  -v /portainer/Files/AppData/Config/Jellyseerr:/app/config \
   --restart unless-stopped \
   fallenbagel/jellyseerr:latest || error "Failed to run Jellyseerr docker container!"

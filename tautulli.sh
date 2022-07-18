@@ -8,7 +8,7 @@ sudo docker pull tautulli/tautulli:latest || error "Failed to pull Tautulli dock
 sudo docker run -d \
   --name=tautulli \
   --restart=unless-stopped \
-  -v /portainer/Files/AppData/Config/tautulli:/config \
+  -v /portainer/Files/AppData/Config/Tautulli:/config \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=${tz} \

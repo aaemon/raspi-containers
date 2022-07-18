@@ -7,8 +7,8 @@ sudo docker pull adguard/adguardhome:latest || error "Failed to pull AdGuardHome
 sudo docker run -d \
     --name adguardhome \
     --restart unless-stopped \
-    -v /portainer/Files/AppData/Config/adguardhome/work:/opt/adguardhome/work \
-    -v /portainer/Files/AppData/Config/adguardhome/conf:/opt/adguardhome/conf \
+    -v /portainer/Files/AppData/Config/adguardhome/work:/opt/AdguardHome/work \
+    -v /portainer/Files/AppData/Config/adguardhome/conf:/opt/AdguardHome/conf \
     -p 53:53/tcp -p 53:53/udp \
     -p 67:67/udp -p 68:68/udp \
     -p 80:80/tcp -p 443:443/tcp -p 443:443/udp -p 3000:3000/tcp \

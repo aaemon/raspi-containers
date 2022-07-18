@@ -11,7 +11,7 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 8081:8081 \
-  -v /portainer/Files/AppData/Config/medusa:/config \
+  -v /portainer/Files/AppData/Config/Medusa:/config \
   -v /media/nfs/downloads:/downloads \
   -v /media/nfs/tvshows-english:/tv \
   --restart unless-stopped \

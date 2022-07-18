@@ -11,6 +11,6 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 5055:5055 \
-  -v /portainer/Files/AppData/Config/overseerr:/config \
+  -v /portainer/Files/AppData/Config/Overseerr:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/overseerr:latest || error "Failed to run Overseerr docker container!"

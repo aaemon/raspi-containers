@@ -15,6 +15,6 @@ sudo docker run -d \
   -e SUBDOMAINS=${subdomains} \
   -e TOKEN=${token} \
   -e LOG_FILE=false \
-  -v /portainer/Files/AppData/Config/duckdns:/config \
+  -v /portainer/Files/AppData/Config/DuckDNS:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/duckdns:latest || error "Failed to run DuckDNS docker container!"

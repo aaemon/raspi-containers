@@ -12,6 +12,6 @@ sudo docker run -d \
   -e TZ=${tz} \
   -p 80:80 \
   -p 443:443 \
-  -v /portainer/Files/AppData/Config/heimdall:/config \
+  -v /portainer/Files/AppData/Config/Heimdall:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/heimdall:latest || error "Failed to run Heimdall docker container!"

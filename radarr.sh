@@ -11,7 +11,7 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 7878:7878 \
-  -v /portainer/Files/AppData/Config/radarr:/config \
+  -v /portainer/Files/AppData/Config/Radarr:/config \
   -v /media/nfs/movies-english:/movies-english `#optional` \
   -v /media/nfs/movies-hindi:/movies-hindi `#optional` \
   -v /media/nfs/movies-bangla:/movies-bangla `#optional` \

@@ -12,8 +12,8 @@ sudo docker run -d \
     -e TZ=${tz} \
     -e CLI_ARGS= `#optional` \
     -p 8200:8200 \
-    -v /portainer/Files/AppData/Config/duplicati/config:/config \
-    -v /portainer/Files/AppData/Config/duplicati/backups:/backups \
-    -v /portainer/Files/AppData/Config/duplicati/source:/source \
+    -v /portainer/Files/AppData/Config/Duplicati/config:/config \
+    -v /portainer/Files/AppData/Config/Duplicati/backups:/backups \
+    -v /portainer/Files/AppData/Config/Duplicati/source:/source \
     --restart unless-stopped \
     lscr.io/linuxserver/duplicati:latest || error "Failed to run Duplicati docker image!"

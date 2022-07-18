@@ -13,8 +13,8 @@ sudo docker run -d \
     -p 4430:443 \
     -e TZ=${tz} \
     -e WEBPASSWORD=${password} \
-    -v "/portainer/Files/AppData/Config/pihole/etc-pihole:/etc/pihole" \
-    -v "/portainer/Files/AppData/Config/pihole/etc-dnsmasq.d:/etc/dnsmasq.d" \
+    -v "/portainer/Files/AppData/Config/PiHole/etc-pihole:/etc/pihole" \
+    -v "/portainer/Files/AppData/Config/PiHole/etc-dnsmasq.d:/etc/dnsmasq.d" \
     --restart=unless-stopped \
     --hostname pi.hole \
     -e VIRTUAL_HOST="pi.hole" \

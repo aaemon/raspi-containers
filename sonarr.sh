@@ -11,7 +11,7 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 8989:8989 \
-  -v /portainer/Files/AppData/Config/sonarr:/config \
+  -v /portainer/Files/AppData/Config/Sonarr:/config \
   -v /media/nfs/tvshows-english:/tvshows-english `#optional` \
   -v /media/nfs/downloads:/torrent/downloads `#optional` \
   --restart unless-stopped \

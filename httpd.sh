@@ -8,7 +8,7 @@ sudo docker run -d \
     --name httpd \
     -p 80:80 \
     -p 443:443 \
-    -v /portainer/Files/AppData/Config/httpd:/usr/local/apache2/htdocs/ \
+    -v /portainer/Files/AppData/Config/Httpd:/usr/local/apache2/htdocs/ \
     -- restart=unless-stopped \
     httpd:latest || error "Failed to run Httpd docker image!"
 

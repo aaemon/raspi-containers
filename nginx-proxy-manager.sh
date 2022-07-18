@@ -9,6 +9,6 @@ sudo docker run -d \
     -p 8181:8181 \
     -p 8080:8080 \
     -p 4443:4443 \
-    -v /docker/appdata/nginx-proxy-manager:/config:rw \
+    -v /docker/appdata/Nginx-Proxy-Manager:/config:rw \
     --restart unless-stopped \
     jlesage/nginx-proxy-manager:latest || error "Failed to run Nginx-Proxy-Manager docker container!"

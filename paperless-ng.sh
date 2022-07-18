@@ -12,7 +12,7 @@ sudo docker run -d \
   -e TZ=${tz} \
   -e REDIS_URL= `#optional` \
   -p 8005:8000 \
-  -v /portainer/Files/AppData/Config/paperless-ng/config:/config \
-  -v /portainer/Files/AppData/Config/paperless-ng/data:/data \
+  -v /portainer/Files/AppData/Config/Paperless-NG/config:/config \
+  -v /portainer/Files/AppData/Config/Paperless-NG/data:/data \
   --restart unless-stopped \
   lscr.io/linuxserver/paperless-ng:latest || error "Failed to run Paperless-NG docker image!"

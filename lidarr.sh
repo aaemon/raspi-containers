@@ -11,7 +11,7 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 8686:8686 \
-  -v /portainer/Files/AppData/Config/config:/config \
+  -v /portainer/Files/AppData/Config/Lidarr:/config \
   -v /media/nfs/music:/music 
   -v /media/nfs/downloads:/downloads 
   --restart unless-stopped \

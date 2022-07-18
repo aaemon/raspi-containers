@@ -14,7 +14,7 @@ sudo docker run -d \
   -p 8112:8112 \
   -p 6881:6881 \
   -p 6881:6881/udp \
-  -v /portainer/Files/AppData/Config/deluge/config:/config \
+  -v /portainer/Files/AppData/Config/Deluge:/config \
   -v /media/nfs/downloads:/downloads \
   --restart unless-stopped \
   lscr.io/linuxserver/deluge:latest || error "Failed to run Deluge docker container!"

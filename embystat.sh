@@ -11,6 +11,6 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=${tz} \
   -p 6555:6555 \
-  -v /portainer/Files/AppData/Config/embystat/config:/config \
+  -v /portainer/Files/AppData/Config/EmbyStat:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/embystat:latest || error "Failed to run EmbyStat docker container!"

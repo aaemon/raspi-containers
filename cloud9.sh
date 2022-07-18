@@ -16,7 +16,7 @@ sudo docker run -d \
   -e USERNAME=${username} \
   -e PASSWORD=${password} \
   -p 8000:8000 \
-  -v /path/to/your/code:/code `#optional` \
+  -v /portainer/Files/AppData/Config/Cloud9/workspace:/code `#optional` \
   -v /var/run/docker.sock:/var/run/docker.sock `#optional` \
   --restart unless-stopped \
   lscr.io/linuxserver/cloud9:latest || error "Failed to run Cloud9 docker container!"
