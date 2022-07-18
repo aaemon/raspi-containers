@@ -6,9 +6,9 @@ sudo docker pull netdata/netdata:latest || error "Failed to pull NetData docker 
 
 sudo docker run -d --name=netdata \
   -p 19999:19999 \
-  -v /portainer/Files/AppData/Config/netdata/netdataconfig:/etc/netdata \
-  -v /portainer/Files/AppData/Config/netdata/netdatalib:/var/lib/netdata \
-  -v /portainer/Files/AppData/Config/netdata/netdatacache:/var/cache/netdata \
+  -v /portainer/Files/AppData/Config/Netdata/netdataconfig:/etc/netdata \
+  -v /portainer/Files/AppData/Config/Netdata/netdatalib:/var/lib/netdata \
+  -v /portainer/Files/AppData/Config/Netdata/netdatacache:/var/cache/netdata \
   -v /etc/passwd:/host/etc/passwd:ro \
   -v /etc/group:/host/etc/group:ro \
   -v /proc:/host/proc:ro \
