@@ -3,7 +3,7 @@
 read -p "Time Zone: " tz
 echo "Waiting to pull the latest image..."
 
-sudo docker pull lscr.io/linuxserver/qbittorrent:latest || error "Failed to pull qBittorrent docker image!"
+sudo docker pull hotio/qbittorrent:latest || error "Failed to pull qBittorrent docker image!"
 
 sudo docker run -d \
   --name=qbittorrent \
@@ -17,4 +17,4 @@ sudo docker run -d \
   -v /portainer/Files/AppData/Config/qBittorrent:/config \
   -v /media/nfs/downloads:/torrent/downloads \
   --restart unless-stopped \
-  lscr.io/linuxserver/qbittorrent:latest || error "Failed to run qBittorrent docker container!"
+  hotio/qbittorrent:latest || error "Failed to run qBittorrent docker container!"
