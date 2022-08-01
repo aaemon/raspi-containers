@@ -17,6 +17,7 @@ sudo docker run -d \
     -v "/portainer/Files/AppData/Config/PiHole/etc-dnsmasq.d:/etc/dnsmasq.d" \
     --restart=unless-stopped \
     --hostname pi.hole \
+    --cap-add NET_ADMIN \
     -e VIRTUAL_HOST="pi.hole" \
     -e PROXY_LOCATION="pi.hole" \
     -e ServerIP="127.0.0.1" \

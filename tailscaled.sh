@@ -8,7 +8,8 @@ sudo docker run -d \
   --name=tailscaled \
   -v /var/lib:/var/lib \
   -v /dev/net/tun:/dev/net/tun \
-  --network=host --privileged \
+  --network=host \
+  --privileged \
   --restart unless-stopped \
   tailscale/tailscale tailscaled || error "Failed to run Tailscale docker container!"
 

@@ -12,7 +12,7 @@ sudo docker run -d \
   -e TZ=${tz} \
   -p 8686:8686 \
   -v /portainer/Files/AppData/Config/Lidarr:/config \
-  -v /media/nfs/music:/music 
-  -v /media/nfs/downloads:/downloads 
+  -v /media/nfs/music:/music \
+  -v /media/nfs/downloads:/downloads \ 
   --restart unless-stopped \
   lscr.io/linuxserver/lidarr:latest || error "Failed to run Lidarr docker container!"

@@ -15,5 +15,5 @@ sudo docker run -d \
   -v /portainer/Files/AppData/Config/PiAlert/db/pialert.db:/home/pi/pialert/db/pialert.db \
   -v /portainer/Files/AppData/Config/PiAlert/log.db:/home/pi/pialert/log \
   --network host \
-  --restart=always \
+  --restart=unless-stopped \
   jokobsk/pi.alert:latest || error "Failed to run PiAlert docker container!"

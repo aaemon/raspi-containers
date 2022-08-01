@@ -8,4 +8,5 @@ sudo docker run -d \
   --name phpadminer \
   --link mysql:db \
   -p 3090:8080 \
+  --restart unless-stopped \
   adminer:latest || error "Failed to run phpAdminer docker image!"
