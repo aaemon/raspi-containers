@@ -10,8 +10,8 @@ sudo docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=${tz} \
-  -p 80:80 \
-  -p 443:443 \
+  -p 8087:80 \
+  -p 4437:443 \
   -v /portainer/Files/AppData/Config/Heimdall:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/heimdall:latest || error "Failed to run Heimdall docker container!"
