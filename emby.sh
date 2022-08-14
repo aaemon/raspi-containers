@@ -17,7 +17,7 @@ sudo docker run -d \
     --runtime=nvidia \ # Expose NVIDIA GPUs
     --publish 8096:8096 \ # HTTP port
     --publish 8920:8920 \ # HTTPS port
-    --env UID=1000 \ # The UID to run emby as (default: 2)
-    --env GID=1000 \ # The GID to run emby as (default 2)
+    --env UID=1000 \ 
+    --env GID=1000 \ 
     --restart unless-stopped \
     emby/embyserver:latest || error "Failed to run Emby docker container!"
