@@ -1,5 +1,6 @@
 #!/bin/bash
 
+read -p "WG Host IP: " host
 read -p "Password: " password
 echo "Waiting to pull the latest image..."
 
@@ -7,7 +8,7 @@ sudo docker pull weejewel/wg-easy:latest || error "Failed to pull Wireguard dock
 
 sudo docker run -d \
   --name=wireguard \
-  -e WG_HOST=192.168.31.48 \
+  -e WG_HOST=${host} \
   -e PASSWORD=${password} \
   -v /portainer/Files/AppData/Config/WireGuard:/etc/wireguard \
   -p 51820:51820/udp \
