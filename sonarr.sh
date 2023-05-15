@@ -12,7 +12,7 @@ sudo docker run -d \
   -e TZ=${tz} \
   -p 8989:8989 \
   -v /portainer/Files/AppData/Config/Sonarr:/config \
-  -v /media/nfs/tvshows-english:/tvshows-english `#optional` \
-  -v /media/nfs/downloads:/torrent/downloads `#optional` \
+  -v /mnt/hdd/jellyfin:/data \
+  -v /mnt/hdd/downloads:/downloads \
   --restart unless-stopped \
   lscr.io/linuxserver/sonarr:latest || error "Failed to run Sonarr docker container!"

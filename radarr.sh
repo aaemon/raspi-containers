@@ -12,10 +12,7 @@ sudo docker run -d \
   -e TZ=${tz} \
   -p 7878:7878 \
   -v /portainer/Files/AppData/Config/Radarr:/config \
-  -v /media/nfs/movies-english:/movies-english `#optional` \
-  -v /media/nfs/movies-hindi:/movies-hindi `#optional` \
-  -v /media/nfs/movies-bangla:/movies-bangla `#optional` \
-  -v /media/nfs/animations-english:/animations-english `#optional` \
-  -v /media/nfs/downloads:/torrent/downloads `#optional` \
+  -v /mnt/hdd/jellyfin:/data \
+  -v /mnt/hdd/downloads:/downloads \
   --restart unless-stopped \
   lscr.io/linuxserver/radarr:latest || error "Failed to run Radarr docker container!"

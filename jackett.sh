@@ -10,8 +10,7 @@ sudo docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=${tz} \
-  -e AUTO_UPDATE=true `#optional` \
-  -e RUN_OPTS=<run options here> `#optional` \
+  -e AUTO_UPDATE=true \
   -p 9117:9117 \
   -v /portainer/Files/AppData/Config/Jackett:/config \
   -v /media/nfs/downloads:/downloads \

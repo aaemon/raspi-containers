@@ -10,7 +10,7 @@ sudo docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=${tz} \
-  -e CONFIGFILE=/config/adguardhome-sync.yaml `#optional` \
+  -e CONFIGFILE=/config/adguardhome-sync.yaml \
   -p 8080:8080 \
   -v /portainer/Files/AppData/Config/AdGuardHome-Sync:/config \
   --restart unless-stopped \

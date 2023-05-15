@@ -6,9 +6,10 @@ sudo docker pull jlesage/nginx-proxy-manager:latest || error "Failed to pull Ngi
 
 sudo docker run -d \
     --name=nginx-proxy-manager \
-    -p 8181:8181 \
-    -p 8080:8080 \
-    -p 4443:4443 \
-    -v /docker/appdata/Nginx-Proxy-Manager:/config:rw \
+    -p 80:80 \
+    -p 81:81 \
+    -p 443:443 \
+    -v /portainer/Files/AppData/Config/nginx-proxy-manager/data:/data
+    -v /portainer/Files/AppData/Config/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
     --restart unless-stopped \
-    jlesage/nginx-proxy-manager:latest || error "Failed to run Nginx-Proxy-Manager docker container!"
+    jc21/nginx-proxy-manager:latest || error "Failed to run Nginx-Proxy-Manager docker container!"

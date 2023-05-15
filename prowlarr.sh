@@ -13,4 +13,4 @@ sudo docker run -d \
   -p 9696:9696 \
   -v /portainer/Files/AppData/Config/Prowlarr:/config \
   --restart unless-stopped \
-  lscr.io/linuxserver/prowlarr:develop || error "Failed to run Prowlarr docker container!"
+  lscr.io/linuxserver/prowlarr:latest || error "Failed to run Prowlarr docker container!"

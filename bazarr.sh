@@ -12,10 +12,6 @@ sudo docker run -d \
   -e TZ=${tz} \
   -p 6767:6767 \
   -v /portainer/Files/AppData/Config/Bazarr:/config \
-  -v /media/nfs/tvshows-english:/data/tvshows-english \
-  -v /media/nfs/movies-english:/data/movies-english \
-  -v /media/nfs/movies-hindi:/data/movies-hindi \
-  -v /media/nfs/movies-bangla:/data/movies-bangla \
-  -v /media/nfs/animations-english:/data/animations-english \
+  -v /mnt/hdd/jellyfin:/data \
   --restart unless-stopped \
   lscr.io/linuxserver/bazarr:latest || error "Failed to run Bazarr docker container!"

@@ -12,7 +12,7 @@ sudo docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=${tz} \
-  -p 3002:3000 `#optional` \
+  -p 3002:3000 \
   -v /portainer/Failes/AppData/Config/Wireshark:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/wireshark:latest || error "Failed to run Wireshark docker container!"

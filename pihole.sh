@@ -10,7 +10,6 @@ sudo docker run -d \
     --name pihole \
     -p 53:53/tcp -p 53:53/udp \
     -p 1010:80 \
-    -p 4430:443 \
     -e TZ=${tz} \
     -e WEBPASSWORD=${password} \
     -v "/portainer/Files/AppData/Config/PiHole/etc-pihole:/etc/pihole" \

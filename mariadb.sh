@@ -7,7 +7,7 @@ sudo docker pull mariadb:latest || error "Failed to pull MariaDB docker image!"
 
 sudo docker run -d \
   --name mariadb \
-  -p 3808:3306 \
+  -p 3306:3306 \
   -v /var/lib/mariadb:/var/lib/mysql \
   -e MARIADB_ROOT_PASSWORD=${password} \
   --restart unless-stopped \
